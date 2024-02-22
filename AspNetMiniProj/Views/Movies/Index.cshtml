@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Movie";
+}
+@model IndexVM[]
+
+
+
+
+<h4 style="color:black">Here you can add movies that you have watched and write your description. Just add a movie!</h4>
+    <ul>
+
+        @foreach (var movie in Model)
+        {
+            <li>
+                <a asp-controller="Movies" asp-action="Detail" asp-route-id="@movie.Id" class="btn">@movie.Name</a>
+            </li> 
+            
+            
+        }
+
+    </ul>
+
+<div>
+
+    <form asp-controller="Movies" asp-action="Create" method="get">
+        <button type="submit" class="submit-button">Add Movie</button>
+    </form>
+
+</div>
+    
+
+

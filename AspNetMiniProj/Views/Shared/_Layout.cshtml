@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+   
+    <title>@ViewBag.Title</title>
+</head>
+<body >
+    <style>
+
+        .header {
+            background-image: url('https://wallpaperaccess.com/full/5819409.jpg');
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-position: 50% center;
+          
+            height: 600px;
+        }
+
+            .header h1 {
+                font-size: 2.5rem;
+                margin: 0;
+                padding: 0;
+                letter-spacing: 2px;
+
+            }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0.5rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAD7A0;
+            
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            ul li {
+                margin-bottom: 1rem;
+            }
+
+        a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s, font-size 0.3s; 
+            font-size: 18px; 
+        }
+
+            a:hover {
+                color: red;
+                font-size: 25px; 
+            }
+
+        .submit-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: black;
+            border: none;
+            border-radius: 0.3rem;
+            padding: 0.5rem 3rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            font-family: 'Permanent Marker', cursive;
+            text-align: center;
+            margin: 10px auto;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .submit-button:hover {
+                background-color: #0056b3;
+                color: red;
+                transform: translateY(-3px);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+        .homelink {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 70px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .homelink:hover {
+                
+                color: #333;
+            }
+
+
+        .beskrivning {
+
+            width: 400px;
+            text-align:right;
+            color:black;
+            border:1px solid black;
+
+        }
+     
+
+        
+
+
+    </style>
+  
+
+    <main class="header">
+        
+       <nav class="homelink">
+           <a asp-controller="Movies" asp-action="Index">Home</a>
+
+       </nav>
+
+        <header>
+            <h3 style="color:black">@ViewBag.Title</h3>
+        </header>
+
+
+      
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            <h5 style="color:black">Copyright © 2023 FilmInc. All rights reserved. Designed & Developed by AladdinAB</h5>
+        </footer>
+    </main>
+
+
+ 
+    @RenderSection("scripts", false)
+</body>
+</html>
